@@ -3,7 +3,7 @@ import { Question } from "../interfaces/question";
 export const questions: Question[] = [
     {
         id: 1,
-        text: 'What is your favorite color?',
+        text: 'This is a test to see what happens when the text is much longer. What is your favorite color?',
         options: { 'Dog': 'I', 'Cat': "E" }
     },
     {

@@ -30,11 +30,11 @@ export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: 
     };
 
     return (
-        <div className="flex flex-col items-center justify-center text-black border-8 border-gray-500 rounded-2xl">
+        <div className="flex flex-col items-center justify-center font-mono text-black border-8 border-gray-500 rounded-2xl w-[25rem]">
             <img src="/next.svg" alt="Vercel Logo"
-                className="aspect-square"
+                className="aspect-square w-[20rem]"
             />
-            <h1 className="mt-6 text-center">Question {questions[index].id}</h1>
+            <h1 className="mt-6 text-2xl text-center">Question {questions[index].id}</h1>
             <h2 className="mt-4 text-center w-[18rem]">{questions[index].text}</h2>
             <ul className="flex flex-col items-center justify-center text-center">
                 {Object.entries(questions[index].options).map(([key, value]) => (
