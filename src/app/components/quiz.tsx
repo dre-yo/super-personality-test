@@ -30,26 +30,28 @@ export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: 
     };
 
     return (
-        <div className="flex flex-col justify-center text-black border-8 border-gray-500 rounded-2xl">
-            <img src="/next.svg" alt="Vercel Logo" />
+        <div className="flex flex-col items-center justify-center text-black border-8 border-gray-500 rounded-2xl">
+            <img src="/next.svg" alt="Vercel Logo"
+                className="aspect-square"
+            />
             <h1 className="mt-6 text-center">Question {questions[index].id}</h1>
             <h2 className="mt-4 text-center w-[18rem]">{questions[index].text}</h2>
-            <ul className="w-auto text-center">
+            <ul className="flex flex-col items-center justify-center text-center">
                 {Object.entries(questions[index].options).map(([key, value]) => (
                     <li
                         key={key}
-                        className={`mt-3 h-[4rem] border-2 border-black rounded-md cursor-pointer flex items-center justify-center ${selected === key ? "bg-gray-500" : ""
+                        className={`mt-3 h-[5rem] w-[17rem] rounded-md cursor-pointer flex items-center justify-center ${selected === key ? "bg-gray-600 text-white" : "bg-gray-300 text-black"
                             }`}
                         onClick={() => handleOptionSelect(key)}
-                        onMouseEnter={(e) => (e.target as HTMLElement).classList.add("hover:bg-gray-200")}
-                        onMouseLeave={(e) => (e.target as HTMLElement).classList.remove("hover:bg-gray-200")}
+                        onMouseEnter={(e) => (e.target as HTMLElement).classList.add("hover:bg-gray-400")}
+                        onMouseLeave={(e) => (e.target as HTMLElement).classList.remove("hover:bg-gray-400")}
                     >
                         {key}
                     </li>
                 ))}
             </ul>
             <button
-                className="h-16 mt-3 border-2 border-gray-700 "
+                className="h-16 w-[17rem] mt-3 mb-3 border-2 border-gray-700 rounded-xl"
                 onClick={next}
                 disabled={isLocked || selectedOption === null}
             >
