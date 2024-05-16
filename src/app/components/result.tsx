@@ -1,4 +1,6 @@
-export default function ResultScreen({ selectedOptions }: { selectedOptions: string[] }) {
+import React from "react";
+
+export default function ResultScreen({ selectedOptions, onRestart }: { selectedOptions: string[], onRestart: () => void }) {
     function calculateMBTI(array: string[]) {
         const counts: { [key: string]: number } = {
             I: 0,
@@ -29,9 +31,15 @@ export default function ResultScreen({ selectedOptions }: { selectedOptions: str
     const mbtiResults = calculateMBTI(selectedOptions);
 
     return (
-        <div className="text-black">
-            <h1>{selectedOptions}</h1>
-            <h1>{mbtiResults}</h1>
+        <div className="text-black flex flex-col items-center">
+            <h1>Selected Options: {selectedOptions.join(', ')}</h1>
+            <h1>MBTI Results: {mbtiResults}</h1>
+            <button
+                className="px-4 py-2 bg-blue-500 text-white rounded-md mt-4"
+                onClick={onRestart}
+            >
+                Restart
+            </button>
         </div>
     )
 }
