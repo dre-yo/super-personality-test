@@ -30,7 +30,7 @@ export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: 
     };
 
     return (
-        <div className="flex flex-col items-center justify-center font-mono text-black border-8 border-gray-500 rounded-2xl w-[25rem]">
+        <div className="flex flex-col items-center justify-center  text-black border-8 border-gray-500 rounded-2xl w-[25rem]">
             <Envelope />
             <h1 className="mt-6 text-2xl text-center">Question {questions[index].id}</h1>
             <h2 className="mt-4 text-center w-[18rem]">{questions[index].text}</h2>
