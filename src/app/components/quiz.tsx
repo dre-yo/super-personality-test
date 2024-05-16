@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import { questions } from "../data/questions";
-
+import Envelope from '../../../public/envelope.svg'
 export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: (options: string[]) => void }) {
     const [index, setIndex] = useState(0);
     const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
@@ -31,9 +31,7 @@ export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: 
 
     return (
         <div className="flex flex-col items-center justify-center font-mono text-black border-8 border-gray-500 rounded-2xl w-[25rem]">
-            <img src="/next.svg" alt="Vercel Logo"
-                className="aspect-square w-[20rem]"
-            />
+            <Envelope />
             <h1 className="mt-6 text-2xl text-center">Question {questions[index].id}</h1>
             <h2 className="mt-4 text-center w-[18rem]">{questions[index].text}</h2>
             <ul className="flex flex-col items-center justify-center text-center">
