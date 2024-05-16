@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import { questions } from "../data/questions";
-import Envelope from '../../../public/envelope.svg'
+import Envelope from '../../../public/svg/envelope.svg'
 export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: (options: string[]) => void }) {
     const [index, setIndex] = useState(0);
     const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
