@@ -31,7 +31,7 @@ export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: 
 
     return (
         <div className="card flex flex-col items-center justify-center  text-black border-8 border-gray-500 rounded-2xl w-[25rem]">
-            <Envelope />
+            <Envelope style={{ transform: 'rotate(20deg)' }} />
             <h1 className="mt-6 text-2xl text-center">Question {questions[index].id}</h1>
             <h2 className="mt-4 text-center w-[18rem]">{questions[index].text}</h2>
             <ul className="flex flex-col items-center justify-center text-center">
