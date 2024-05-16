@@ -24,7 +24,7 @@ export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: 
 
     const handleOptionSelect = (optionKey: string) => {
         setSelected(optionKey);
-        const selectedValue = questions[index].options[optionKey]; // Accessing the value ("I" or "E") using the key
+        const selectedValue = questions[index].options[optionKey]; // Accessing the value using the key
         setSelectedOption(selectedValue);
         setIsLocked(false);
     };
