@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import CutScene03 from "./final";
+import INTP from "../../../public/svg/necromancy.svg"
 
 export default function ResultScreen({ selectedOptions, onRestart }: { selectedOptions: string[], onRestart: () => void }) {
     const [showResult, setShowResult] = useState(false);
@@ -43,14 +44,32 @@ export default function ResultScreen({ selectedOptions, onRestart }: { selectedO
 
     const mbtiResults = calculateMBTI(selectedOptions);
 
+    const mbtiSvgs: { [key: string]: React.FC } = {
+        INTJ: INTP,
+        INTP: INTP,
+        ENTJ: INTP,
+        ENTP: INTP,
+        INFJ: INTP,
+        INFP: INTP,
+        ENFJ: INTP,
+        ENFP: INTP,
+        ISTJ: INTP,
+        ISFJ: INTP,
+        ESTJ: INTP,
+        ESFJ: INTP,
+        ISTP: INTP,
+        ISFP: INTP,
+        ESTP: INTP,
+        ESFP: INTP
+    }
+    const ResultSvg = mbtiSvgs[mbtiResults];
     return (
         <div className="flex flex-col items-center text-black">
             {!showResult ? (
                 <CutScene03 />
             ) : (
                 <>
-                    <h1>Selected Options: {selectedOptions.join(', ')}</h1>
-                    <h1>MBTI Results: {mbtiResults}</h1>
+                    {ResultSvg && <ResultSvg />}
                     <button
                         className="w-40 text-lg border-2 btn btn-outline rounded-3xl"
                         onClick={onRestart}
