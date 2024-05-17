@@ -2,7 +2,7 @@ import { Question } from "../interfaces/question";
 
 export const questions: Question[] = [
     {
-        id: 1,
+        id: '01',
         text: 'It\'s a nice sunny morning, you wake up, yawn, roll over, and notice an envelope on your nightstand.',
         options: {
             'A letter? I wonder what it is. You open it with excitement ': 'E',
@@ -10,7 +10,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: 2,
+        id: '02',
         text: 'Before you can open the envelope, it flips around and says “I\'ve been waiting to meet you, hero.',
         options: {
             'I don\'t care if this is a dream or not I\'m soooo ready for this.': 'N',
@@ -18,7 +18,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: 3,
+        id: '03',
         text: 'What are you waiting for hero? Are you ready to join us?',
         options: {
             'Hold on, I have to go to work, feed the cat, brush my teeth…': 'T',
@@ -26,7 +26,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: 4,
+        id: '04',
         text: 'The envelope grabs your hand and brings you through a portal.',
         options: {
             'OMG, Where am I going? How is this even possible? I\'m gonna get a headache from this.': 'J',
@@ -34,7 +34,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: 5,
+        id: '05',
         text: 'You are brought to another world with lush green fields and purple skies. You look around and notice the envelope is gone, but you see two people nearby. You walk towards them and notice they are humanoid cats! They notice you and approach you asking if you need a guide. You agree and you choose:',
         options: {
             'A chatty & friendly cat named Haru.': 'E',
@@ -42,7 +42,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: 6,
+        id: '06',
         text: 'As your guide is taking you around the town, you realize the city is pretty far. What transportation do you choose?',
         options: {
             'A unicorn, I don\'t know how to ride one yet, but it looks fun and I\'m sure I can figure it out.': 'N',
@@ -50,7 +50,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: 7,
+        id: '07',
         text: 'You reach your destination and you see a garden and a castle, which one do you choose?',
         options: {
             'The castle duh! I need to figure out what all this is about.': 'T',
@@ -58,7 +58,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: 8,
+        id: '08',
         text: 'After choosing, you look around a bit and end up seeing a troll. What do you do?',
         options: {
             'Approach him and demand him to tell you where to go': 'J',
@@ -66,7 +66,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: 9,
+        id: '09',
         text: 'The troll tells you that you must enter through a cave to find what you are looking for.',
         options: {
             'I can\'t wait to see what\'s waiting there for me, perhaps a magic sword?': 'E',
@@ -74,7 +74,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: 10,
+        id: '10',
         text: 'You start going down the cave and see a sleeping bear, with what seems to be a glowing scroll, what do you do?',
         options: {
             'Take the scroll as quietly as I can and book it.': 'S',
@@ -82,7 +82,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: 11,
+        id: '11',
         text: 'Before you make your move, the bear wakes up and growls at your presence. What are you doing?',
         options: {
             'Running and fighting': 'T',
@@ -90,7 +90,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: 12,
+        id: '12',
         text: 'The bear pounces on you and you blackout.\nYou wake up in your bed. You look around and see that the envelope is in your hand.',
         options: {
             'That had to be a dream right? I\'m glad I\'m out of it.': 'J',

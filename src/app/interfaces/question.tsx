@@ -1,5 +1,5 @@
 export interface Question {
-    id: number;
+    id: string;
     text: string;
     options: { [key: string]: string }; // Object with string keys and string values
 }
