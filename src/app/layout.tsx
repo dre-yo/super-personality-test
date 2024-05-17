@@ -13,6 +13,10 @@ const helvetica = localFont({
       weight: '400'
     },
     {
+      path: '../../public/fonts/HelveticaNeueMedium.otf',
+      weight: '500'
+    },
+    {
       path: '../../public/fonts/HelveticaNeueBold.otf',
       weight: '700'
     }
