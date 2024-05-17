@@ -31,11 +31,11 @@ export default function ResultScreen({ selectedOptions, onRestart }: { selectedO
     const mbtiResults = calculateMBTI(selectedOptions);
 
     return (
-        <div className="text-black flex flex-col items-center">
+        <div className="flex flex-col items-center text-black">
             <h1>Selected Options: {selectedOptions.join(', ')}</h1>
             <h1>MBTI Results: {mbtiResults}</h1>
             <button
-                className="px-4 py-2 bg-blue-500 text-white rounded-md mt-4"
+                className="w-40 text-lg border-2 btn btn-outline rounded-3xl"
                 onClick={onRestart}
             >
                 Restart

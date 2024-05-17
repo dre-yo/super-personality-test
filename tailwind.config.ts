@@ -28,7 +28,13 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-helvetica)']
-      }
+      },
+      colors: {
+        "primary": "#75ff34",
+        "primary-muted": "#98e888",
+        "black": "#000000",
+        "white": "#ffffff",
+      },
     },
   },
   plugins: [

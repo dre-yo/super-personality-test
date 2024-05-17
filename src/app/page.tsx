@@ -25,7 +25,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen  bg-white">
+    <main className="flex flex-col items-center justify-between bg-white min-h-svh">
       {!isStarted ? (
         <WelcomeScreen onStart={handleStart} />
       ) : questionNumber < 12 ? (
