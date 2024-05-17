@@ -120,7 +120,7 @@ export const questions: Question[] = [
 
     {
         id: '12',
-        text: 'The bear pounces on you and you blackout.\nYou wake up in your bed. You look around and see that the envelope is in your hand.',
+        text: 'You wake up in your bed. You look around and see that the envelope is in your hand.',
         image: './image/slide_14.png',
         options: {
             'That had to be a dream right? I\'m glad I\'m out of it.': 'J',
