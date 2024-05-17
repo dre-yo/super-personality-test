@@ -10,7 +10,7 @@ const config: Config = {
     themes: [
       {
         mytheme: {
-          "primary": "#a991f7",
+          "primary": "#75FF34",
           "secondary": "#f6d860",
           "accent": "#37cdbe",
           "neutral": "#3d4451",
