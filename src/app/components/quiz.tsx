@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { questions } from "../data/questions";
 import Envelope from '../../../public/image/envelope.svg'
 import CutScene01 from "./story";
+import CutScene02 from "./bear";
 
 export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: (options: string[]) => void }) {
     const [index, setIndex] = useState(0);
@@ -37,6 +38,9 @@ export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: 
     if (index === 3) {
         return <CutScene01 onContinue={() => setIndex(4)} />;
     }
+    if (index === 12) {
+        return <CutScene02 onContinue={() => setIndex(13)} />;
+    }
 
 
     return (
@@ -68,7 +72,7 @@ export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: 
                     ))}
                 </ul>
             </div>
-            <progress className="absolute w-2/3 bottom-6 progress progress-primary" value={index} max="12"></progress>
+            <progress className="absolute w-2/3 bottom-6 progress progress-primary" value={index} max="13"></progress>
         </div>
     );
 }

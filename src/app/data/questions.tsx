@@ -99,6 +99,7 @@ export const questions: Question[] = [
             'Take some time to figure out the best possible solution to take the scroll without getting hurt': "N"
         }
     },
+
     {
         id: '/image/number_11.png',
         text: 'Before you make your move, the bear wakes up and growls at your presence. What are you doing?',
@@ -108,6 +109,15 @@ export const questions: Question[] = [
             'The bear is kind of cute, I will try my best to reason with it.': "F"
         }
     },
+    {
+        id: '',
+        text: '',
+        image: '',
+        options: {
+            '': ''
+        },
+    },
+
     {
         id: '/image/number_12.png',
         text: 'The bear pounces on you and you blackout.\nYou wake up in your bed. You look around and see that the envelope is in your hand.',
