@@ -2,7 +2,7 @@ import { Question } from "../interfaces/question";
 
 export const questions: Question[] = [
     {
-        id: '/image/number_1.png',
+        id: '01',
         text: 'It\'s a nice sunny morning, you wake up, yawn, roll over, and notice an envelope on your nightstand.',
         image: '/image/slide_1.png',
         options: {
@@ -11,7 +11,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: '/image/number_2.png',
+        id: '02',
         text: 'Before you can open the envelope, it flips around and says “I\'ve been waiting to meet you, hero.',
         image: '/image/slide_2.png',
         options: {
@@ -20,7 +20,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: '/image/number_3.png',
+        id: '03',
         text: 'What are you waiting for hero? Are you ready to join us?',
         image: '/image/slide_3.png',
         options: {
@@ -37,7 +37,7 @@ export const questions: Question[] = [
         },
     },
     {
-        id: '/image/number_4.png',
+        id: '04',
         text: 'The envelope grabs your hand and brings you through a portal.',
         image: '/image/slide_4.png',
         options: {
@@ -46,16 +46,16 @@ export const questions: Question[] = [
         }
     },
     {
-        id: '/image/number_5.png',
+        id: '05',
         text: 'You walk towards them and notice they are humanoid cats! They notice you and approach you asking if you need a guide. You agree and you choose:',
-        image: '/image/slide_6.png',
+        image: '/image/screen_6.png',
         options: {
             'A chatty & friendly cat named Haru.': 'E',
             'A silent and honest cat named Boo.': "I"
         }
     },
     {
-        id: '/image/number_6.png',
+        id: '06',
         text: 'As your guide is taking you around the town, you realize the city is pretty far. What transportation do you choose?',
         image: '/image/slide_7.png',
         options: {
@@ -64,7 +64,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: '/image/number_7.png',
+        id: '07',
         text: 'You reach your destination and you see a garden and a castle, which one do you choose?',
         image: '/image/slide_8.png',
         options: {
@@ -73,7 +73,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: '/image/number_8.png',
+        id: '08',
         text: 'After choosing, you look around a bit and end up seeing a troll. What do you do?',
         image: '/image/slide_9.png',
         options: {
@@ -82,7 +82,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: '/image/number_9.png',
+        id: '09',
         text: 'The troll tells you that you must enter through a cave to find what you are looking for.',
         image: '/image/slide_10.png',
         options: {
@@ -91,7 +91,7 @@ export const questions: Question[] = [
         }
     },
     {
-        id: '/image/number_10.png',
+        id: '10',
         text: 'You start going down the cave and see a sleeping bear, with what seems to be a glowing scroll, what do you do?',
         image: '/image/slide_11.png',
         options: {
@@ -101,7 +101,7 @@ export const questions: Question[] = [
     },
 
     {
-        id: '/image/number_11.png',
+        id: '11',
         text: 'Before you make your move, the bear wakes up and growls at your presence. What are you doing?',
         image: '/image/slide_12.png',
         options: {
@@ -119,7 +119,7 @@ export const questions: Question[] = [
     },
 
     {
-        id: '/image/number_12.png',
+        id: '12',
         text: 'The bear pounces on you and you blackout.\nYou wake up in your bed. You look around and see that the envelope is in your hand.',
         image: '/image/slide_14.png',
         options: {

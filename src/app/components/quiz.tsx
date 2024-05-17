@@ -45,18 +45,20 @@ export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: 
 
     return (
         <div className="flex flex-col items-center justify-center w-screen overflow-hidden text-black h-svh rounded-2xl">
-            <div className="absolute  h-[15rem] top-[1.5rem]">
+            <div className="absolute h-[15rem] top-[1.5rem]">
                 <img
-                    className="w-full h-full"
+                    className="object-contain w-full h-full"
                     src={questions[index].image}
                     alt="Envelope" />
             </div>
-            <img
-                className="absolute w-8 aspect-square top-[17.5rem]"
-                src={questions[index].id}
-                alt="Envelope" />
-            <div className="flex flex-col fixed items-center justify-start top-[20rem]">
-                <h2 className="px-4 font-medium text-center md:text-xl lg:text-2xl xl:text-3xl">
+
+            <div className="absolute flex flex-col items-center justify-start top-[17.5rem]">
+                <div className="relative flex items-center justify-center mb-6">
+                    <div className="rotate-45 border-[1px] border-black aspect-square w-[1.75rem] flex items-center justify-center">
+                        <p className="rotate-[-45deg] text-[13px]">{questions[index].id}</p>
+                    </div>
+                </div>
+                <h2 className="px-[20px] text-lg font-medium text-center">
                     {questions[index].text}
                 </h2>
                 <ul className="flex flex-col items-center justify-center text-center">
@@ -64,7 +66,7 @@ export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: 
                         <button
                             key={key}
                             id={key}
-                            className={`btn btn-outline border-1 rounded-3xl mt-3 h-[5rem] w-[17rem] font-normal  flex items-center justify-center ${selected === key ? 'bg-primary-muted text-white' : 'text-black'}`}
+                            className={`btn btn-outline text-base border-1 rounded-3xl mt-3 h-[5rem] w-[17rem] font-normal flex items-center justify-center ${selected === key ? 'bg-primary-muted text-white' : 'text-black'}`}
                             onClick={() => handleOptionSelect(key)}
                         >
                             {key}
@@ -72,7 +74,7 @@ export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: 
                     ))}
                 </ul>
             </div>
-            <progress className="absolute w-2/3 bottom-6 progress progress-primary" value={index} max="13"></progress>
+            <progress className="absolute w-2/3 bottom-4 progress progress-primary" value={index} max="13"></progress>
         </div>
     );
 }
