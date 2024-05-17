@@ -35,21 +35,33 @@ export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: 
 
     return (
         <div className="flex flex-col items-center justify-center w-screen overflow-hidden text-black h-svh rounded-2xl">
-            <img src={Envelope} alt="Envelope" />
-            <h1 className="mt-6 text-2xl text-center">Question {questions[index].id}</h1>
-            <h2 className="mt-4 text-center w-[18rem]">{questions[index].text}</h2>
-            <ul className="flex flex-col items-center justify-center text-center">
-                {Object.entries(questions[index].options).map(([key, value]) => (
-                    <button
-                        key={key}
-                        id={key}
-                        className={`btn btn-outline border-2 rounded-3xl mt-3 h-[5rem] w-[17rem] font-normal cursor-pointer flex items-center justify-center ${selected === key ? 'bg-primary-muted text-white' : 'text-black'}`}
-                        onClick={() => handleOptionSelect(key)}
-                    >
-                        {key}
-                    </button>
-                ))}
-            </ul>
+            <div className="absolute  h-[15rem] top-[1.5rem]">
+                <img
+                    className="w-full h-full"
+                    src={questions[index].image}
+                    alt="Envelope" />
+            </div>
+            <img
+                className="absolute w-8 aspect-square top-[17.5rem]"
+                src={questions[index].id}
+                alt="Envelope" />
+            <div className="flex flex-col fixed items-center justify-start mt-[18rem] border-4 border-black">
+                <h2 className="px-4 text-lg text-center md:text-xl lg:text-2xl xl:text-3xl">
+                    {questions[index].text}
+                </h2>
+                <ul className="flex flex-col items-center justify-center text-center">
+                    {Object.entries(questions[index].options).map(([key, value]) => (
+                        <button
+                            key={key}
+                            id={key}
+                            className={`btn btn-outline border-2 rounded-3xl mt-3 h-[5rem] w-[17rem] font-normal cursor-pointer flex items-center justify-center ${selected === key ? 'bg-primary-muted text-white' : 'text-black'}`}
+                            onClick={() => handleOptionSelect(key)}
+                        >
+                            {key}
+                        </button>
+                    ))}
+                </ul>
+            </div>
             <progress className="absolute w-2/3 bottom-6 progress progress-primary" value={index} max="12"></progress>
         </div>
     );
