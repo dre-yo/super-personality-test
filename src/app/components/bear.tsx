@@ -9,8 +9,9 @@ export default function CutScene02({ onContinue }: { onContinue: () => void }) {
                     alt="Envelope" />
                 <h1 className="text-white w-screen px-[4rem] font-medium italic text-[21px] top-[0rem] relative">The bear pounces on you and you blackout.</h1>
                 <button className="w-2/3 border-black bg-white/50 btn rounded-3xl h-[4rem] text-[18px] mt-[5rem]" onClick={onContinue}>Continue</button>
+                <progress className="relative w-2/3 mt-8 progress progress-primary" value={11} max="13"></progress>
             </div>
-        </div>
+        </div >
     );
 
 }
