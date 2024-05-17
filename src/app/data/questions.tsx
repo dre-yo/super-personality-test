@@ -29,6 +29,14 @@ export const questions: Question[] = [
         }
     },
     {
+        id: '',
+        text: '',
+        image: '',
+        options: {
+            '': ''
+        },
+    },
+    {
         id: '/image/number_4.png',
         text: 'The envelope grabs your hand and brings you through a portal.',
         image: '/image/slide_4.png',
