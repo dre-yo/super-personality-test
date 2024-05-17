@@ -1,6 +1,19 @@
-import React from "react";
+'use client'
+import React, { useEffect, useState } from "react";
+import CutScene03 from "./final";
 
 export default function ResultScreen({ selectedOptions, onRestart }: { selectedOptions: string[], onRestart: () => void }) {
+    const [showResult, setShowResult] = useState(false);
+
+    useEffect(() => {
+        // Show the result screen after 3 seconds
+        const timer = setTimeout(() => {
+            setShowResult(true);
+        }, 1000);
+
+        // Clear the timer on component unmount
+        return () => clearTimeout(timer);
+    }, []);
     function calculateMBTI(array: string[]) {
         const counts: { [key: string]: number } = {
             I: 0,
@@ -32,14 +45,20 @@ export default function ResultScreen({ selectedOptions, onRestart }: { selectedO
 
     return (
         <div className="flex flex-col items-center text-black">
-            <h1>Selected Options: {selectedOptions.join(', ')}</h1>
-            <h1>MBTI Results: {mbtiResults}</h1>
-            <button
-                className="w-40 text-lg border-2 btn btn-outline rounded-3xl"
-                onClick={onRestart}
-            >
-                Restart
-            </button>
+            {!showResult ? (
+                <CutScene03 />
+            ) : (
+                <>
+                    <h1>Selected Options: {selectedOptions.join(', ')}</h1>
+                    <h1>MBTI Results: {mbtiResults}</h1>
+                    <button
+                        className="w-40 text-lg border-2 btn btn-outline rounded-3xl"
+                        onClick={onRestart}
+                    >
+                        Restart
+                    </button>
+                </>
+            )}
         </div>
     )
 }
