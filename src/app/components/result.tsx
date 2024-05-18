@@ -14,7 +14,7 @@ import ISFJ from "../../../public/svg/isfj/accelerated healting.svg"
 import ESTJ from "../../../public/svg/estj/time travel.svg"
 import ESFJ from "../../../public/svg/esfj/animal whisperer.svg"
 import ISTP from "../../../public/svg/istp/nine lives.svg"
-import ISFP from "../../../public/svg/ISFP/pictomancy.svg"
+import ISFP from "../../../public/svg/isfp/pictomancy.svg"
 import ESTP from "../../../public/svg/estp/pyromancy.svg"
 import ESFP from "../../../public/svg/esfp/power mimcry.svg"
 
