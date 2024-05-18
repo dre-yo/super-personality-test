@@ -79,14 +79,22 @@ export default function ResultScreen({ selectedOptions, onRestart }: { selectedO
     }
     const ResultSvg = mbtiSvgs[mbtiResults];
 
-    const handleShare = () => {
-        const link = "https://dre-yo.github.io/super-personality-test/";
-        navigator.clipboard.writeText(link).then(() => {
-            alert('Link copied to clipboard!');
-        }).catch(err => {
-            console.error('Failed to copy the link: ', err);
-        });
-    }
+    const handleShare = async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: 'Super Personality Test',
+                    text: 'Check out this personality test!',
+                    url: 'https://dre-yo.github.io/super-personality-test/',
+                });
+                console.log('Shared successfully');
+            } catch (error) {
+                console.error('Sharing failed:', error);
+            }
+        } else {
+            console.error('Web Share API is not supported in this browser.');
+        }
+    };
 
     return (
         <div className="flex flex-col items-center text-black">
