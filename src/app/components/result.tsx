@@ -2,6 +2,13 @@
 import React, { useEffect, useState } from "react";
 import CutScene03 from "./final";
 import INTP from "../../../public/svg/necromancy.svg"
+import INTJ from "../../../public/svg/Dreamwalking.svg"
+import ENTJ from "../../../public/svg/super-villain.svg"
+import ENTP from "../../../public/svg/shapeshifter.svg"
+import INFJ from "../../../public/svg/telepathy.svg"
+import INFP from "../../../public/svg/weather-control.svg"
+import ENFJ from "../../../public/svg/the hero.svg"
+import ESFJ from "../../../public/svg/animal whisperer.svg"
 
 export default function ResultScreen({ selectedOptions, onRestart }: { selectedOptions: string[], onRestart: () => void }) {
     const [showResult, setShowResult] = useState(false);
@@ -45,18 +52,18 @@ export default function ResultScreen({ selectedOptions, onRestart }: { selectedO
     const mbtiResults = calculateMBTI(selectedOptions);
 
     const mbtiSvgs: { [key: string]: React.FC } = {
-        INTJ: INTP,
+        INTJ: INTJ,
         INTP: INTP,
-        ENTJ: INTP,
-        ENTP: INTP,
-        INFJ: INTP,
-        INFP: INTP,
-        ENFJ: INTP,
+        ENTJ: ENTJ,
+        ENTP: ENTP,
+        INFJ: INFJ,
+        INFP: INFP,
+        ENFJ: ENFJ,
         ENFP: INTP,
         ISTJ: INTP,
         ISFJ: INTP,
         ESTJ: INTP,
-        ESFJ: INTP,
+        ESFJ: ESFJ,
         ISTP: INTP,
         ISFP: INTP,
         ESTP: INTP,

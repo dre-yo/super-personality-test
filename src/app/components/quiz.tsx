@@ -23,6 +23,7 @@ export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: 
     const handleOptionSelect = (optionKey: string) => {
         setSelected(optionKey);
         const selectedValue = questions[index].options[optionKey]; // Accessing the value using the key
+        console.log(selectedValue);
         setSelectedOption(selectedValue);
 
         const button = document.getElementById(optionKey);
