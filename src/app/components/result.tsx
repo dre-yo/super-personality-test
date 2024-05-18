@@ -63,6 +63,8 @@ export default function ResultScreen({ selectedOptions, onRestart }: { selectedO
         ESFP: INTP
     }
     const ResultSvg = mbtiSvgs[mbtiResults];
+
+
     return (
         <div className="flex flex-col items-center text-black">
             {!showResult ? (
@@ -70,12 +72,14 @@ export default function ResultScreen({ selectedOptions, onRestart }: { selectedO
             ) : (
                 <>
                     {ResultSvg && <ResultSvg />}
-                    <button
-                        className="w-40 text-lg border-2 btn btn-outline rounded-3xl"
-                        onClick={onRestart}
-                    >
-                        Restart
-                    </button>
+                    <div className="flex flex-row align-center">
+                        <button
+                            className="w-40 mt-8 text-lg border-2 btn btn-outline rounded-3xl"
+                            onClick={onRestart}
+                        >
+                            Restart
+                        </button>
+                    </div>
                 </>
             )}
         </div>

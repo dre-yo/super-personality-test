@@ -29,14 +29,6 @@ export const questions: Question[] = [
         }
     },
     {
-        id: '',
-        text: '',
-        image: '',
-        options: {
-            '': ''
-        },
-    },
-    {
         id: '04',
         text: 'The envelope grabs your hand and brings you through a portal.',
         image: './image/slide_4.png',
@@ -44,6 +36,14 @@ export const questions: Question[] = [
             'OMG, Where am I going? How is this even possible? I\'m gonna get a headache from this.': 'J',
             'No way! This is so cool!': "P"
         }
+    },
+    {
+        id: '',
+        text: '',
+        image: '',
+        options: {
+            '': ''
+        },
     },
     {
         id: '05',

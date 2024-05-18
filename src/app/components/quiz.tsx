@@ -35,8 +35,8 @@ export default function QuestionComponent({ onNextQuestion }: { onNextQuestion: 
         }
     };
 
-    if (index === 3) {
-        return <CutScene01 onContinue={() => setIndex(4)} />;
+    if (index === 4) {
+        return <CutScene01 onContinue={() => setIndex(5)} />;
     }
     if (index === 12) {
         return <CutScene02 onContinue={() => setIndex(13)} />;
