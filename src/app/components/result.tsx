@@ -79,6 +79,14 @@ export default function ResultScreen({ selectedOptions, onRestart }: { selectedO
     }
     const ResultSvg = mbtiSvgs[mbtiResults];
 
+    const handleShare = () => {
+        const link = "https://dre-yo.github.io/super-personality-test/";
+        navigator.clipboard.writeText(link).then(() => {
+            alert('Link copied to clipboard!');
+        }).catch(err => {
+            console.error('Failed to copy the link: ', err);
+        });
+    }
 
     return (
         <div className="flex flex-col items-center text-black">
@@ -89,10 +97,16 @@ export default function ResultScreen({ selectedOptions, onRestart }: { selectedO
                     {ResultSvg && <ResultSvg />}
                     <div className="flex flex-row align-center">
                         <button
-                            className="w-40 mt-8 text-lg border-2 btn btn-outline rounded-3xl"
+                            className="w-40 mx-2 my-8 text-lg border-2 btn btn-outline rounded-3xl"
                             onClick={onRestart}
                         >
                             Restart
+                        </button>
+                        <button
+                            className="w-40 mx-2 my-8 text-lg border-2 btn btn-outline rounded-3xl"
+                            onClick={handleShare}
+                        >
+                            Share
                         </button>
                     </div>
                 </>
