@@ -1,14 +1,22 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import CutScene03 from "./final";
-import INTP from "../../../public/svg/necromancy.svg"
-import INTJ from "../../../public/svg/Dreamwalking.svg"
-import ENTJ from "../../../public/svg/super-villain.svg"
-import ENTP from "../../../public/svg/shapeshifter.svg"
-import INFJ from "../../../public/svg/telepathy.svg"
-import INFP from "../../../public/svg/weather-control.svg"
-import ENFJ from "../../../public/svg/the hero.svg"
-import ESFJ from "../../../public/svg/animal whisperer.svg"
+import INTJ from "../../../public/svg/intj/Dreamwalking.svg"
+import INTP from "../../../public/svg/intp/necromancy.svg"
+import ENTJ from "../../../public/svg/entj/super villain.svg"
+import ENTP from "../../../public/svg/entp/shapeshifter.svg"
+import INFJ from "../../../public/svg/infj/telepathy.svg"
+import INFP from "../../../public/svg/infp/weather control.svg"
+import ENFJ from "../../../public/svg/enfj/the hero.svg"
+import ENFP from "../../../public/svg/enfp/cupid.svg"
+import ISTJ from "../../../public/svg/istj/telescopic vision.svg"
+import ISFJ from "../../../public/svg/isfj/accelerated healting.svg"
+import ESTJ from "../../../public/svg/estj/time travel.svg"
+import ESFJ from "../../../public/svg/esfj/animal whisperer.svg"
+import ISTP from "../../../public/svg/istp/nine lives.svg"
+import ISFP from "../../../public/svg/ISFP/pictomancy.svg"
+import ESTP from "../../../public/svg/estp/pyromancy.svg"
+import ESFP from "../../../public/svg/esfp/power mimcry.svg"
 
 export default function ResultScreen({ selectedOptions, onRestart }: { selectedOptions: string[], onRestart: () => void }) {
     const [showResult, setShowResult] = useState(false);
@@ -59,15 +67,15 @@ export default function ResultScreen({ selectedOptions, onRestart }: { selectedO
         INFJ: INFJ,
         INFP: INFP,
         ENFJ: ENFJ,
-        ENFP: INTP,
-        ISTJ: INTP,
-        ISFJ: INTP,
-        ESTJ: INTP,
+        ENFP: ENFP,
+        ISTJ: ISTJ,
+        ISFJ: ISFJ,
+        ESTJ: ESTJ,
         ESFJ: ESFJ,
-        ISTP: INTP,
-        ISFP: INTP,
-        ESTP: INTP,
-        ESFP: INTP
+        ISTP: ISTP,
+        ISFP: ISFP,
+        ESTP: ESTP,
+        ESFP: ESFP
     }
     const ResultSvg = mbtiSvgs[mbtiResults];
 
