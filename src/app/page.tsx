@@ -3,6 +3,10 @@ import { useState } from "react";
 import QuestionComponent from "./components/quiz";
 import ResultScreen from "./components/result";
 import WelcomeScreen from "./components/welcome";
+import ReactGA from "react-ga";
+
+const TRACKING_ID = "G-YNLWG85MFF";
+ReactGA.initialize(TRACKING_ID);
 
 export default function Home() {
   const [questionNumber, setQuestionNumber] = useState(0);
