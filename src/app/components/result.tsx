@@ -17,13 +17,15 @@ import ISTP from "../../../public/svg/istp/nine lives.svg"
 import ISFP from "../../../public/svg/isfp/pictomancy.svg"
 import ESTP from "../../../public/svg/estp/pyromancy.svg"
 import ESFP from "../../../public/svg/esfp/power mimcry.svg"
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 export default function ResultScreen({ selectedOptions, onRestart }: { selectedOptions: string[], onRestart: () => void }) {
     const [showResult, setShowResult] = useState(false);
 
     useEffect(() => {
-        ReactGA.pageview(window.location.pathname);
+        ReactGA.send({
+            hitType: 'pageview'
+        });
         // Show the result screen after 3 seconds
         const timer = setTimeout(() => {
             setShowResult(true);

@@ -5,7 +5,7 @@ import ResultScreen from "./components/result";
 import WelcomeScreen from "./components/welcome";
 import ReactGA from "react-ga";
 
-const TRACKING_ID = "G-YNLWG85MFF";
+const TRACKING_ID = "G-J2F6NT510N";
 ReactGA.initialize(TRACKING_ID);
 
 export default function Home() {
