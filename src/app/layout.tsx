@@ -1,5 +1,7 @@
 import localFont from '@next/font/local';
 import type { Metadata } from "next";
+import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -32,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${helvetica.variable} font-sans`}>
       <body>{children}</body>
+      <GoogleTagManager gtmId="G-J2F6NT510N" />
     </html>
   );
 }
